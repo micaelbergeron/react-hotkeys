@@ -51,7 +51,9 @@ const App = React.createClass({
           </ul>
         </div>
         <HotKeys handlers={handlers} className={'viewport ' + (this.state && this.state.konamiTime ? 'konamiTime' : '')}>
-          {Array.apply(null, new Array(10)).map((e, i) => <Node key={i} />)}
+          <div>
+            {Array.apply(null, new Array(10)).map((e, i) => <Node key={i} />)}
+          </div>
         </HotKeys>
       </div>
     );
@@ -111,7 +113,9 @@ const Node = React.createClass({
     //   or focused programattically
     return (
       <HotKeys tabIndex="0" handlers={handlers} className="node" style={style}>
-        Node
+        <div>
+          Node
+        </div>
       </HotKeys>
     );
   }
